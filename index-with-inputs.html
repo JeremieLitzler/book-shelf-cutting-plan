@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cutting Plan</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #cuttingPlan {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1em;
+      }
+      .plank {
+        flex-grow: 1;
+        margin-bottom: 1em;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      #inputSection {
+        margin-bottom: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Cutting Plan</h2>
+    <div id="inputSection">
+      <label for="fullPlanks">Nombre de planches complètes:</label>
+      <input type="number" id="fullPlanks" value="8" />
+      <br />
+
+      <label for="plankDimensions"
+        >Dimensions des planches (ex: 760x300,480x300,1294x300):</label
+      >
+      <input
+        type="text"
+        id="plankDimensions"
+        value="760x300,480x300,1294x300,1594x300,1558x300,240x300,250x300"
+      />
+      <br />
+      <label for="shopPlankLength"
+        >Longueur des planches de la boutique (mm):</label
+      >
+      <input type="number" id="shopPlankLength" value="2000" />
+      <br />
+      <label for="sawBladeThickness">Épaisseur de la lame (mm):</label>
+      <input type="number" id="sawBladeThickness" value="2" />
+      <br />
+      <button id="generatePlan">Générer le plan de découpe</button>
+      <button id="clearLocalStorage">Effacer le stockage local</button>
+    </div>
+    <div id="cuttingPlan"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
